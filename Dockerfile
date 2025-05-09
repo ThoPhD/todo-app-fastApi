@@ -1,16 +1,11 @@
-# Sử dụng image Python chính thức
-FROM python:3.9-slim
+FROM python:3.10-slim
 
-# Cài đặt các thư viện cần thiết
-WORKDIR /app
-COPY requirements.txt .
+WORKDIR /code
+
+COPY app/requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy mã nguồn vào container
-COPY . .
+COPY app/ .
 
-# Mở port cho FastAPI (cổng 8000)
-EXPOSE 8000
-
-# Chạy FastAPI với uvicorn
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
