@@ -12,7 +12,7 @@ This is a simple Todo application built using [FastAPI](https://fastapi.tiangolo
 
 ## Requirements
 
-- Python 3.7+
+- Python 3.10+
 - FastAPI
 - Uvicorn (ASGI server)
 
@@ -21,7 +21,7 @@ This is a simple Todo application built using [FastAPI](https://fastapi.tiangolo
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/todo-app-fastapi.git
+    git clone git@github.com:ThoPhD/todo-app-fastApi.git
     cd todo-app-fastapi
     ```
 
@@ -55,12 +55,17 @@ This is a simple Todo application built using [FastAPI](https://fastapi.tiangolo
 ```
 todo-app-fastapi/
 │
-├── main.py             # Entry point of the application
-├── models.py           # Pydantic models for data validation
-├── routes.py           # API route definitions
-├── database.py         # Database setup and operations
-├── requirements.txt    # Python dependencies
-└── README.md           # Project documentation
+├── app/
+│   ├── main.py             # Entry point of the application
+│   ├── models.py           # Pydantic models for data validation
+|   ├── routes.py           # API route definitions
+│   ├── database.py         # Database setup and operations
+│   └── requirements.txt    # Python dependencies
+├── Dockerfile
+├── docker-compose.yml
+└── .env
+└── README.md               # Project documentation
+
 ```
 
 ## API Endpoints
